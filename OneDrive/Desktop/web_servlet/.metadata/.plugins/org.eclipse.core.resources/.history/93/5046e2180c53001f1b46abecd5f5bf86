@@ -1,0 +1,87 @@
+package loginandsingup;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class Login_Servlet_App extends HttpServlet{
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String email = req.getParameter("email");
+		String pwd = req.getParameter("pwd");
+		
+		Connection c = null;
+		PreparedStatement p =null;
+		ResultSet r = null;
+		
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			c = DriverManager.getConnection("jdbc:mysql://localhost:3306?user=root&&password=root");
+			p = c.prepareStatement("select * from crud_app.emp_details_app where email=? and password=?");
+			p.setString(1, email);
+			p.setString(2, pwd);
+			r = p.executeQuery();
+			
+			String empno = null;
+			String ename = null;
+			Long phno = 0l;
+			String address = null;
+			String em = null;
+			String pwds = null;
+			
+			while(r.next()) {
+				em = r.getString("email");
+				pwds = r.getString("password");
+				empno = r.getString("empno");
+				ename = r.getString("ename");
+				phno = r.getLong("phno");
+				address = r.getString("address");
+			}
+			
+			if(email.equals(em) && pwd.equals(pwds)) {
+				PrintWriter pw = resp.getWriter();
+				pw.println("<!DOCTYPE html>\r\n"
+						+ "<html>\r\n"
+						+ "<head>\r\n"
+						+ "<meta charset=\"ISO-8859-1\">\r\n"
+						+ "<title>Home</title>\r\n"
+						+ "</head>\r\n"
+						+ "<body>\r\n"
+						+ "	<h1 align=\"center\">Welcome to the Home Page</h1>\r\n"
+						+ "	<table border='2px solid' width='500px' height='500px'>");
+				while(r.next()) {
+					pw.println("<tr>\r\n"
+							+ "			<td>"+empno+"</td>\r\n"
+							+ "			<td>"+ename+"</td>\r\n"
+							+ "			<td>"+phno+"</td>\r\n"
+							+ "			<td>"+address+"</td>\r\n"
+							+ "			<td>"+em+"</td>\r\n"
+							+ "			<td>"+pwds+"</td>\r\n"
+							+ "			<td><a href=\"update_app.html\"><button>Edit</button></a></td>\r\n"
+							+ "			<td><a href=\"delete_app.html\"><button>Delete</button></a></td>\r\n"
+							+ "		</tr>");
+				}
+				pw.println("</table>\r\n"
+						+ "</body>\r\n"
+						+ "</html>");
+				
+			} else {
+				resp.sendRedirect("invalid_app.html");
+			}
+			
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+}

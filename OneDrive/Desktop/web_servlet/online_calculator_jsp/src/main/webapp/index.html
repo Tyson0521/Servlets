@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Calci JSP</title>
+<style type="text/css">
+	nav{
+		ul{
+			padding: 0px;
+			display: flex;
+			justify-content: space-around; 		
+			list-style: none;
+			li{
+				width:100%;
+				border: 2px solid;
+			}
+			a{
+				text-decoration: none;
+				color: black;
+				text-align: center;
+			}
+		}
+	}
+</style>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="">Home</a></li>
+			<li><a href="">Add</a></li>
+			<li><a href="">Square</a></li>
+			<li><a href="">Division</a></li>
+		</ul>
+	</nav>
+
+	<form action="add.jsp">
+		<label>Enter the Number 1 :</label>
+		<input name="num_1"><br><br>
+		<label>Enter the Number 2 :</label>
+		<input name="num_2"><br><br>
+		<button>Add</button>
+	</form>
+</body>
+</html>

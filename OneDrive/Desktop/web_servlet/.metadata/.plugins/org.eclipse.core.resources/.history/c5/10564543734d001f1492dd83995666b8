@@ -1,0 +1,25 @@
+package first_servlet_proje;
+
+import java.io.IOException;
+
+import javax.servlet.GenericServlet;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+
+public class Registration_Demo_servlet extends GenericServlet {
+
+	@Override
+	public void service(ServletRequest req, ServletResponse resp) throws ServletException, IOException {
+	
+		System.out.println("You are Registered");
+		String name = req.getParameter("name");
+		int age = Integer.parseInt(req.getParameter("age"));
+		String gender = req.getParameter("gender");
+		System.out.println("enter name is "+name+" and age is "+age);
+		System.out.println("enter gender is "+gender);
+		
+		
+	}
+
+}

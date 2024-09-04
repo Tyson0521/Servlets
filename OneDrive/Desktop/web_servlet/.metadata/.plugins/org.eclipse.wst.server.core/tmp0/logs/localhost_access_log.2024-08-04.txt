@@ -1,0 +1,10 @@
+127.0.0.1 - - [04/Aug/2024:19:02:26 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [04/Aug/2024:19:02:26 +0530] "GET /servlet_chaining/first.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [04/Aug/2024:19:02:27 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [04/Aug/2024:19:05:36 +0530] "GET /servlet_chaining/Login.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [04/Aug/2024:19:05:40 +0530] "POST /servlet_chaining/login HTTP/1.1" 200 324
+0:0:0:0:0:0:0:1 - - [04/Aug/2024:19:07:17 +0530] "GET /servlet_chaining/signup.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [04/Aug/2024:19:07:42 +0530] "POST /servlet_chaining/signup HTTP/1.1" 200 218
+0:0:0:0:0:0:0:1 - - [04/Aug/2024:19:08:00 +0530] "POST /servlet_chaining/login HTTP/1.1" 200 239
+0:0:0:0:0:0:0:1 - - [04/Aug/2024:19:08:07 +0530] "GET /servlet_chaining/Login.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [04/Aug/2024:19:08:13 +0530] "POST /servlet_chaining/login HTTP/1.1" 200 324

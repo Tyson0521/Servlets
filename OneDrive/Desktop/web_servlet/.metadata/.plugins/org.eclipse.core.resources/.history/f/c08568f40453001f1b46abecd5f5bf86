@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Index Page</title>
+<style type="text/css">
+	a{
+		text-decoration: none;
+		color: black;
+	}
+</style>
+
+</head>
+<body>
+	<h1>Welcome to the Emplyoee Portal</h1>
+	<h4>Create a Account</h4>
+	<button><a href="">Creat Account</a></button>
+	<h4>Have an account already ? Click here to Login</h4>
+	<button><a href="login_app.html">Login</a></button>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Updating Page</title>
+</head>
+<body>
+	<h2 align="center">Update Your Record here</h2>
+	<form action="update" method="post">
+		<label>Please enter the Empno :</label>
+		<input type="text" name="empno">
+		<p>Choose the detail you want to update : </p>
+	</form>
+</body>
+</html>

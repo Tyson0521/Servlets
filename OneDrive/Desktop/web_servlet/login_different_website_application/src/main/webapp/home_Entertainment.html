@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home</title>
+<style type="text/css">
+	body{
+		background-color: #ff5f6d;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-image: url("https://png.pngtree.com/background/20210709/original/pngtree-ai-robot-artificial-intelligence-background-picture-image_963290.jpg");
+	}
+	div{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		padding: 50px 350px;
+	}
+	button{
+		padding: 15px;
+		border-radius: 10px;
+		border: none;
+		box-shadow: 0px 4px 6px black;
+		margin: 0 10px;
+		background-color: grey;
+		color: white;
+		
+	}
+	h1,h3{
+		color:white;
+	}
+	
+</style>
+</head>
+<body>
+	<h1 align="center">Welcome to the Home Page</h1>
+	<h3 align="center">Choose the website you want to open</h3>
+	<div>
+		<form action="swtich_app" method="post"> 
+			<button name="website" value="prime">Amazon Prime</button>
+			<button name="website" value="aha">Aha</button>
+			<button name="website" value="hotstar">Hotstar</button>
+			<button name="website" value="aniwave">Aniwave</button>
+			<button name="website" value="jiocinema">Jio Cinema</button>
+		</form>
+	</div>
+	
+	
+</body>
+</html>

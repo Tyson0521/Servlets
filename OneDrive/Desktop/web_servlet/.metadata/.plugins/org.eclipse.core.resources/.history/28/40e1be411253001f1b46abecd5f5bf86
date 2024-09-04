@@ -1,0 +1,79 @@
+package loginandsingup;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class Fetch_Servlet_App extends HttpServlet{
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		Connection c = null;
+		PreparedStatement p = null;
+		ResultSet r = null;
+		
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			c = DriverManager.getConnection("jdbc:mysql://localhost:3306?user=root&&password=root");
+			p = c.prepareStatement("select * from crud_app.emp_details_app");
+			r = p.executeQuery();
+			PrintWriter pw = resp.getWriter();
+			pw.println("<!DOCTYPE html>\r\n"
+					+ "<html>\r\n"
+					+ "<head>\r\n"
+					+ "<meta charset=\"ISO-8859-1\">\r\n"
+					+ "<title>Home</title>\r\n"
+					+ "</head>\r\n"
+					+ "<style type=\"text/css\">\r\n"
+					+ "table {\r\n"
+					+ "	td{\r\n"
+					+ "		padding:10px;\r\n"
+					+ "	}\r\n"
+					+ "}\r\n"
+					+ "</style>\r\n"
+					+ "<body>\r\n"
+					+ "	<h1 align=\"center\">The Employee Records</h1>\r\n"
+					+ "	<table border='2px solid' align='center'>");
+			String empno = null;
+			String ename = null;
+			long phno = 0l;
+			String address = null;
+			String email = null;
+			String password = null;
+			while(r.next()) {
+				empno = r.getString("empno");
+				ename = r.getString("ename");
+				phno = r.getLong("phno");
+				address = r.getString("address");
+				email = r.getString("email");
+				password = r.getString("password");
+				pw.println("<tr>\r\n"
+						+ "			<td>"+empno+"</td>\r\n"
+						+ "			<td>"+ename+"</td>\r\n"
+						+ "			<td>"+phno+"</td>\r\n"
+						+ "			<td>"+address+"</td>\r\n"
+						+ "			<td>"+email+"</td>\r\n"
+						+ "			<td>"+password+"</td>\r\n"
+						+ "			<td><a href=\"update_app.html\"><button>Edit</button></a></td>\r\n"
+						+ "			<td><a href=\"delete_app.html\"><button>Delete</button></a></td>\r\n"
+						+ "		</tr>");
+			}
+			pw.println("</table>\r\n"
+					+ "</body>\r\n"
+					+ "</html>");
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+}

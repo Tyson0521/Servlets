@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Updating Page</title>
+</head>
+<body>
+	<h2 align="center">Update Your Record here :</h2>
+	<div>
+	<h4>Select the option :</h4>
+		<form action="">
+			<select name="select">
+				<option value="empno">empno</option>
+			</select>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Sign Up</title>
+</head>
+<body>
+	<h4>Enter your details to create an account :</h4>
+	<div>
+		<form action="signup" method="post">
+			<table>
+				<tr>
+					<td><label>Emplyoee ID :</label></td>
+					<td><input type="text" name="empno"></td>
+				</tr>
+				<tr>
+					<td><label>Name :</label></td>
+					<td><input type="text" name="ename"></td>
+				</tr>
+				<tr>
+					<td><label>Phno : </label></td>
+					<td><input type="text" name="phno"></td>
+				</tr>
+				<tr>
+					<td><label>Address</label></td>
+					<td><textarea rows="3" cols="15" name="add"></textarea></td>
+				</tr>
+				<tr>
+					<td><label>Email : </label></td>
+					<td><input type="text" name="email"></td>
+				</tr>
+				<tr>
+					<td><label>Password : </label></td>
+					<td><input type="text" name="pwd"></td>
+				</tr>
+				<tr>
+					<th colspan="2"><button type="submit">Sign Up</button></th>
+				</tr>
+			</table>
+		</form>
+	</div>
+	
+</body>
+</html>

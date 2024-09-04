@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home</title>
+<style type="text/css">
+	div{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		padding: 50px 350px;
+	}
+	
+</style>
+</head>
+<body>
+	<h1 align="center">Welcome to the Home Page</h1>
+	<div>
+		<form action="fetch" method="post">
+			<button>Fetch the records</button>
+		</form>
+		<form action="search" method="post">
+			<button>Search a Record</button>
+		</form>
+		<form action="" method="post">
+		    <a href="update_app.html"><button>Update a Record</button></a>
+		</form>
+		<form action="" method="post">
+			<a href="delete_app.html"><button>Delete a Record</button></a>
+		</form>
+	</div>
+	
+	
+</body>
+</html>

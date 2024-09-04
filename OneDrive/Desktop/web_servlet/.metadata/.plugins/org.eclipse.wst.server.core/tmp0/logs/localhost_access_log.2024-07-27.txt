@@ -1,0 +1,14 @@
+127.0.0.1 - - [27/Jul/2024:11:20:09 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [27/Jul/2024:11:20:11 +0530] "GET /first_servlet_proje/d.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [27/Jul/2024:11:20:11 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+127.0.0.1 - - [27/Jul/2024:11:48:26 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [27/Jul/2024:11:49:00 +0530] "GET /first_servlet_proje/d.html HTTP/1.1" 200 431
+0:0:0:0:0:0:0:1 - - [27/Jul/2024:11:49:35 +0530] "GET /first_servlet_proje/d.html HTTP/1.1" 200 424
+0:0:0:0:0:0:0:1 - - [27/Jul/2024:11:49:38 +0530] "GET /first_servlet_proje/d.html? HTTP/1.1" 200 424
+0:0:0:0:0:0:0:1 - - [27/Jul/2024:11:49:42 +0530] "GET /first_servlet_proje/d.html? HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [27/Jul/2024:11:49:50 +0530] "GET /first_servlet_proje/d.html? HTTP/1.1" 200 436
+0:0:0:0:0:0:0:1 - - [27/Jul/2024:11:49:52 +0530] "GET /first_servlet_proje/reg? HTTP/1.1" 404 778
+0:0:0:0:0:0:0:1 - - [27/Jul/2024:11:52:25 +0530] "GET /first_servlet_proje/reg? HTTP/1.1" 404 778
+127.0.0.1 - - [27/Jul/2024:11:57:24 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [27/Jul/2024:11:57:24 +0530] "GET /first_servlet_proje/d.html HTTP/1.1" 200 440
+0:0:0:0:0:0:0:1 - - [27/Jul/2024:11:57:32 +0530] "GET /first_servlet_proje/reg? HTTP/1.1" 200 -

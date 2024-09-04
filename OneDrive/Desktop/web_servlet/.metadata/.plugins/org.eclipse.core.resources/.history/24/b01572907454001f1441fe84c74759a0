@@ -1,0 +1,21 @@
+package calculator_application_2;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class Sqaure_Servlet extends HttpServlet{
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		int a = (int)req.getAttribute("a");
+		int sq = a*a;
+		
+		PrintWriter pw = resp.getWriter();
+		pw.println("<h1>The Sqaure of "+a+" is : "+sq+"</h1>");
+	}
+}

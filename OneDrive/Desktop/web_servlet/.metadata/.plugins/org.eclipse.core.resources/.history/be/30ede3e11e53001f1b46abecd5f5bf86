@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Deletion Page</title>
+</head>
+<body>
+	<h2 align="center">Delete the Record here :</h2>
+	<form action="delete" method="post">
+		<label>Select the option you want to delete record of :</label>
+		<select name="select">
+				<option>--select--</option>
+				<option value="empno">empno</option>
+				<option value="ename">ename</option>
+				<option value="phno">phno</option>
+				<option value="email">email</option>
+				<option value="address">address</option>
+		</select> <br> <br>
+		<label>Enter the ${empno} here : </label>
+		<input type="text" name="data">
+		<br> <br>
+		<button>Delete</button>
+	</form>
+	
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login Page</title>
+</head>
+<body>
+	<h4>Enter your Email and password to Login</h4>
+	<form action="login" method="post">
+		<label>Email :</label>
+		<input type="text" name="email">
+		<br><br>
+		<label>Password : </label>
+		<input type="text" name="pwd">
+		<br><br>
+		<button type="sumbit">Login</button>
+		
+	</form>
+</body>
+</html>

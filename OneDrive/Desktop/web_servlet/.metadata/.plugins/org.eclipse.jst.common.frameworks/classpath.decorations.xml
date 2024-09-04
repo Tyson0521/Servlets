@@ -1,0 +1,7 @@
+<classpath>
+  <container id="first_servlet_proje!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="C:/Users/Jarupula/OneDrive/Desktop/web_servlet/first_servlet_proje/src/main/webapp/WEB-INF/lib/servlet-api.jar">
+      <source-attachment-path>C:/Users/Jarupula/Downloads/apache-tomcat-9.0.91-src.zip</source-attachment-path>
+    </entry>
+  </container>
+</classpath>

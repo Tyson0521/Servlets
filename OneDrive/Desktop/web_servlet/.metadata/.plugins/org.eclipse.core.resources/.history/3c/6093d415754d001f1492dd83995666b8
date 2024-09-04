@@ -1,0 +1,5 @@
+package student_web_application;
+
+public class A extends GenericServlet{
+
+}

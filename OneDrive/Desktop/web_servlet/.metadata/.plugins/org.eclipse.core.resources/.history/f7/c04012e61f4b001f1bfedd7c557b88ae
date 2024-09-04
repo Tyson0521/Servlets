@@ -1,0 +1,5 @@
+package first_servlet_proje;
+
+public class A extends GenericServlet{
+
+}

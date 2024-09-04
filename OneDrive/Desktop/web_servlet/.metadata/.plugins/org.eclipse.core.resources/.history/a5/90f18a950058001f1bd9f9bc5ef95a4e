@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Sign Up</title>
+<style type="text/css">
+	h2{
+		text-align: center;
+	}
+	div{
+		display: flex;
+		justify-content: center;
+	}
+	
+</style>
+</head>
+<body>
+	<h2>Enter your details to create an account :</h2>
+	<div>
+		<form action="signUp_application" method="post">
+			<table>
+				<tr>
+					<td><label>Employee ID :</label></td>
+					<td><input type="text" name="empno"></td>
+				</tr>
+				<tr>
+					<td><label>Name :</label></td>
+					<td><input type="text" name="ename"></td>
+				</tr>
+				<tr>
+					<td><label>Phno : </label></td>
+					<td><input type="text" name="phno"></td>
+				</tr>
+				<tr>
+					<td><label>Address :</label></td>
+					<td><textarea rows="3" cols="20" name="add"></textarea></td>
+				</tr>
+				<tr>
+					<td><label>Email : </label></td>
+					<td><input type="text" name="email"></td>
+				</tr>
+				<tr>
+					<td><label>Password : </label></td>
+					<td><input type="text" name="pwd"></td>
+				</tr>
+				<tr>
+					<th colspan="2"><button>Sign Up</button></th>
+				</tr>
+			</table>
+		</form>
+	</div>
+	
+</body>
+</html>

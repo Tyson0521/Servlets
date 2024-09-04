@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Sing Up Successful</title>
+</head>
+<body>
+	<div>
+		<h2>Sign Up is Successfull !</h2>
+		<p>Click here to Login</p>
+		<a href="login_app.html"></a>
+	</div>
+</body>
+</html>

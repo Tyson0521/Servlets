@@ -1,0 +1,28 @@
+package calculator_application_2;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class Addition_Operation extends HttpServlet{
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		int a = Integer.parseInt(req.getParameter("value_1"));
+		int b = Integer.parseInt(req.getParameter("value_2"));
+		int c = a+b;
+		
+		PrintWriter pw = resp.getWriter();
+		pw.println("<h1>Sum of "+a+" and "+b+" is : "+c+"</h1>");
+		
+		req.setAttribute("a", c);
+		RequestDispatcher rd = req.getRequestDispatcher("square");
+		rd.forward(req, resp); 
+		
+	}
+}
